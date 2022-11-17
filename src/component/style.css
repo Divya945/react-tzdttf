@@ -1,0 +1,58 @@
+.userTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.userTable td,
+.userTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.userTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.userTable tr:hover {
+  background-color: #ddd;
+}
+
+.userTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+body,
+.header p {
+  margin: 0;
+}
+.header {
+  width: auto;
+  height: 50px;
+  background-color: aqua;
+}
+.footer {
+  width: auto;
+  height: 50px;
+  background-color: aqua;
+  text-align: center;
+  padding: 10px 0;
+}
+.imgConatiner {
+  width: 200px;
+}
+.authorImage {
+  width: 100%;
+  border-radius: 50%;
+}
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #c7b9d6;
+  border: 1px solid #521495;
+  border-radius: 5px;
+  margin-top: 5px;
+}
