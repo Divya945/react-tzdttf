@@ -1,11 +1,11 @@
 import React from 'react';
 import './style.css';
-import Temperaturecontrol from './component/temperaturecontrol.js';
+import Fetchapi1 from './component/fetchapi1.js';
 
 export default function App() {
   return (
     <div>
-      <Temperaturecontrol />
+      <Fetchapi1 />
     </div>
   );
 }

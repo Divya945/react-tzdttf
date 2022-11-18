@@ -56,3 +56,38 @@ button {
   border-radius: 5px;
   margin-top: 5px;
 }
+.temperature-conainer {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  height: 400px;
+	width: 300px;
+	background: #2b5870;
+	border-radius: 20px;
+	box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.75);
+}
+.temperature-display {
+  display: flex;
+	border-radius: 50%;
+	color: #ffffff;
+	height: 220px;
+	width: 220px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	font-size: 48px;
+	border: 3px #ffffff solid;
+	transition: background 0.5s;
+}
+.cold {
+  background-color: #04aa6d;
+}
+.hot {
+  background-color: #7a215d;
+}
+.imagepanel{
+  width: 250px;
+  padding: 20px;
+  box-shadow: 1px 1px 1px 1px #e2e2e2ad;
+  border: 1px solid #ccc;
+}
