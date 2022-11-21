@@ -41,13 +41,21 @@ export default function quizapp() {
     },
   ];
   const [currentquetion, SetCurrentQuetion] = useState(0);
-  const [score, setScore] = useState(false);
+  const [showscore, setShowscore] = useState(false);
+  const [score, setScore] = useState(0);
 
   const nextquetionhandler = (isCorrect, answerOption) => {
     console.log('next');
-    const nextquetion = currentquetion + 1;
-    SetCurrentQuetion(nextquetion);
 
+    const nextquetion = currentquetion + 1;
+
+    if (isCorrect === true) {
+      alert('correct');
+      setScore(score + 1);
+      console.log(setScore(score + 1));
+    } else {
+      alert('not correct');
+    }
     if (nextquetion < questions.length) {
       console.log(questions.length);
       SetCurrentQuetion(nextquetion);
@@ -55,24 +63,34 @@ export default function quizapp() {
       alert('This is last quetion');
       //setShowScore(true);
       //console.log(setShowScore);
-    }
-    if (isCorrect) {
-      alert('correct');
-    } else {
-      alert('not correct');
+      setShowScore(true);
     }
   };
   return (
     <div>
-      Quiz
-      <p>{questions[currentquetion].questionText}</p>
-      <div>
-        {questions[currentquetion].answerOptions.map((answerOption, index) => (
-          <button onClick={() => nextquetionhandler(answerOption.isCorrect)}>
-            {answerOption.answerText}
-          </button>
-        ))}
-      </div>
+      (
+      {showscore ? (
+        <div>
+          You scored {score} out of {questions.length}
+        </div>
+      ) : (
+        <div>
+          Quiz
+          <p>{questions[currentquetion].questionText}</p>
+          <div>
+            {questions[currentquetion].answerOptions.map(
+              (answerOption, index) => (
+                <button
+                  onClick={() => nextquetionhandler(answerOption.isCorrect)}
+                >
+                  {answerOption.answerText}
+                </button>
+              )
+            )}
+          </div>
+        </div>
+      )}
+      );
     </div>
   );
 }
