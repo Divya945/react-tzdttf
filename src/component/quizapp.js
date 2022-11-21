@@ -53,8 +53,8 @@ export default function quizapp() {
       SetCurrentQuetion(nextquetion);
     } else {
       alert('This is last quetion');
-      setShowScore(true);
-      console.log(setShowScore);
+      //setShowScore(true);
+      //console.log(setShowScore);
     }
     if (isCorrect) {
       alert('correct');
