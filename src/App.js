@@ -1,11 +1,11 @@
 import React from 'react';
 import './style.css';
-import Fetchapi1 from './component/fetchapi1.js';
+import Quizapp from './component/quizapp.js';
 
 export default function App() {
   return (
     <div>
-      <Fetchapi1 />
+      <Quizapp />
     </div>
   );
 }
