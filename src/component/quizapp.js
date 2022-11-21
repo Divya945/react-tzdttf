@@ -68,7 +68,6 @@ export default function quizapp() {
   };
   return (
     <div>
-      (
       {showscore ? (
         <div>
           You scored {score} out of {questions.length}
